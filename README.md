@@ -1,1 +1,1 @@
-# mbservices
+# Service packages for mb
