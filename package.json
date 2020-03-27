@@ -1,0 +1,37 @@
+{
+  "name": "cordova-plugin-mbservices",
+  "version": "1.0.0",
+  "description": "Service packages for mb",
+  "cordova": {
+    "id": "cordova-plugin-mbservices",
+    "platforms": [
+      "android",
+      "windows",
+      "browser"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melin7777/cordova-plugin-mbservices.git"
+  },
+  "keywords": [
+    "mbservices"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    },
+    {
+      "name": "android-sdk",
+      "version": ">=19"
+    }
+  ],
+  "author": "Malinda Warnasuriya",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/melin7777/cordova-plugin-mbservices/issues"
+  },
+  "homepage": "https://github.com/melin7777/cordova-plugin-mbservices#readme",
+  "dependencies": {}
+}

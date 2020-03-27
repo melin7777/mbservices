@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ 
+-->
+
+<plugin id="cordova-plugin-mbservices"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        version="1.0.0">
+
+    <name>MbServices</name>
+
+    <description>Service packages for mb</description>
+
+    <repo>https://github.com/melin7777/cordova-plugin-mbservices.git</repo>
+
+    <keywords>mbservices</keywords>
+
+    <license>Apache 2.0</license>
+
+    <author>Malinda Warnasuriya</author>
+
+    <!-- cordova -->
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+        <engine name="android-sdk" version=">=19" />
+    </engines>
+
+    <!-- interface -->
+    <js-module src="www/mbservices.js" name="MbServices">
+        <clobbers target="cordova.plugins.mbservices" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="MbServices">
+                <param name="android-package" value="de.appplant.cordova.plugin.mbservices.MbServices"/>
+            </feature>
+        </config-file>
+
+        <preference name="ANDROID_SUPPORT_V4_VERSION" default="28.+"/>
+
+        <framework src="com.android.support:support-v4:$ANDROID_SUPPORT_V4_VERSION"/>
+
+        <source-file src="src/android/MbServices.java"
+            target-dir="src/de/appplant/cordova/plugin/mbservices" />
+    </platform>
+
+    <!-- windows -->
+    <platform name="windows">
+        <js-module src="src/windows/MbServicesWindowsProxy.js" name="MbServicesWindowsProxy">
+            <merges target="" />
+        </js-module>
+    </platform>
+
+    <!-- browser -->
+    <platform name="browser">
+        <config-file target="config.xml" parent="/*">
+            <feature name="MbServices">
+                <param name="browser-package" value="MbServices"/>
+            </feature>
+        </config-file>
+
+        <js-module src="src/browser/MbServicesBrowserProxy.js" name="MbServicesBrowserProxy">
+            <runs />
+        </js-module>
+    </platform>
+</plugin>
